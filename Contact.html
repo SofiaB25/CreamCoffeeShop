@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – Cream Coffee Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @font-face {
+      font-family: 'Bebas';
+      src: url('./fonts/BebasNeue-Regular.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      src: url('./fonts/Poppins-Regular.ttf') format('truetype');
+    }
+
+    :root {
+      --font-title: 'Bebas', sans-serif;
+      --font-body: 'Poppins', sans-serif;
+    }
+
+    .font-title {
+      font-family: var(--font-title);
+    }
+
+    .font-body {
+      font-family: var(--font-body);
+    }
+  </style>
+</head>
+
+<body class="bg-[#fef9f6] text-[#3e2c23] font-body">
+
+  <!-- Titre principal -->
+  <header class="text-center py-12">
+    <h1 class="text-5xl font-title tracking-widest uppercase">Cream Coffee Shop</h1>
+    <p class="mt-2 text-lg">Contactez-nous pour réserver ou poser vos questions sur les ateliers ☕</p>
+  </header>
+
+  <!-- Formulaire de contact -->
+  <main class="max-w-2xl mx-auto px-4 pb-20">
+    <form class="bg-white shadow-md rounded-xl p-8 space-y-6">
+      <div>
+        <label for="nom" class="block text-sm font-medium">Nom</label>
+        <input type="text" id="nom" name="nom" required class="mt-1 w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#a97459]"/>
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium">Adresse email</label>
+        <input type="email" id="email" name="email" required class="mt-1 w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#a97459]"/>
+      </div>
+
+      <div>
+        <label for="atelier" class="block text-sm font-medium">Atelier concerné</label>
+        <select id="atelier" name="atelier" required class="mt-1 w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#a97459]">
+          <option value="">Choisissez un atelier</option>
+          <option value="torrefaction">Torréfaction artisanale</option>
+          <option value="cupping">Dégustation sensorielle</option>
+          <option value="blend">Crée ton propre café</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium">Message</label>
+        <textarea id="message" name="message" rows="5" required class="mt-1 w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#a97459]"></textarea>
+      </div>
+
+      <button type="submit" class="bg-[#a97459] text-white py-3 px-6 rounded-full hover:bg-[#8b5e46] transition">Envoyer</button>
+    </form>
+  </main>
+  <style>
+    .footer-bg {
+      background-color: #f4e7dd; 
+    }
+  </style>
+
+  <footer class="footer-bg text-[#3e2c23] py-8">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
+
+
+      <div class="flex items-center mb-4 sm:mb-0">
+        <img src="logo.png" alt="Cream Coffee Shop Logo"  class="h-[150px] w-auto mr-15">
+      </div>
+
+      <div class="flex flex-col items-center sm:items-start mb-4 sm:mb-0">
+      <div class="mb-2 text-center sm:text-left">
+       <span class="font-semibold">Email :</span> contact@creamcoffeeshop.fr
+      </div>
+      <div class="mb-2 text-center sm:text-left">
+      <span class="font-semibold">Adresse :</span> 84 Rue Paul Bert, 62300 Lens
+      </div>
+      <div class="mb-2 text-center sm:text-left">
+       <span class="font-semibold">Horaires :</span> Lundi - Samedi : 7h00 - 20h00
+      </div>
+      </div>
+
+      <div class="text-center mt-4 mb-4">
+        <p class="text-lg mb-4">Rejoignez-nous sur les réseaux !</p>
+        <img src="reseaux.png" alt="Facebook" class="h-8 mx-auto">
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
