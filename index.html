@@ -1,13 +1,74 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SimplonCoffeeCraft</title>
+  <title>CreamCoffeeShop</title>
   <link rel="stylesheet" href="src/css/styles.css">
+  <link rel="stylesheet" href="src/output.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  
-  <script src="src/js/main.js"></script>
+
+<body class="image-accueil-jpg">
+  <header>
+    <header class="flex justify-between items-center p-6 bg-beige-clair shadow-md">
+      <a href="accueil">
+        <img src="creamcoffeeshop.png" alt="Logo du café Cream Coffee Shop" class="logo">
+      </a>
+      <div class="shop-name">
+        <h2>Cream Coffee Shop</h2>
+        <p class="slogan">"la crème de la crème du café artisanaux."</p>
+        <p class="mission">"Un café, une histoire, un savoir-faire."</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="ateliers.html">Ateliers</a></li>
+          <li><a href="contact.html" class="text-gray-800 hover:text-white hover:bg-gray-500 px-4 py-2 rounded-lg"> Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  </header>
+
+
+
+  <style>
+    .footer-bg {
+  background-color: #f4e7dd; 
+}
+</style>
+
+<footer class="footer-bg text-[#3e2c23] py-8">
+<div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
+
+
+  <div class="flex items-center mb-4 sm:mb-0">
+    <img src="logo.png" alt= "Coffee Shop Logo"  class="h-[150px] w-auto mr-15">
+  </div>
+
+  <div class="flex flex-col items-center sm:items-start mb-4 sm:mb-0">
+  <div class="mb-2 text-center sm:text-left">
+   <span class="font-semibold">Email :</span> contact@creamcoffeeshop.fr
+  </div>
+  <div class="mb-2 text-center sm:text-left">
+  <span class="font-semibold">Adresse :</span> 84 Rue Paul Bert, 62300 Lens
+  </div>
+  <div class="mb-2 text-center sm:text-left">
+   <span class="font-semibold">Horaires :</span> Lundi - Samedi : 7h00 - 20h00
+  </div>
+  </div>
+
+  <div class="text-center mt-4 mb-4">
+    <p class="text-lg mb-4">Rejoignez-nous sur les réseaux !</p>
+    <img src="reseaux.png" alt="Facebook" class="h-8 mx-auto">
+
+  </div>
+
+</div>
+</footer>
 </body>
+
 </html>
