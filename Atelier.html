@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nos Ateliers – Cream Coffee Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <header class="sticky top-0 z-50 bg-[#fef9f6] shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <img src="logo.png" alt="Logo" class="h-10">
+      <nav class="space-x-6">
+        <a href="#" class="text-[#3e2c23] font-bold">Accueil</a>
+        <a href="#" class="text-[#3e2c23] font-bold">Ateliers</a>
+        <a href="#" class="text-[#3e2c23] font-bold">Contact</a>
+      </nav>
+    </div>
+  </header>
+  
+
+  <style>
+    @font-face {
+      font-family: 'Bebas';
+      src: url('./fonts/BebasNeue-Regular.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      src: url('./fonts/Poppins-Regular.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Fredoka';
+      src: url('./fonts/Fredoka-Regular.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Pacifico';
+      src: url('./fonts/Pacifico-Regular.ttf') format('truetype');
+    }
+
+    :root {
+      --font-title: 'Bebas', sans-serif;
+      --font-body: 'Poppins', sans-serif;
+      --font-secondary: 'Fredoka', sans-serif;
+    }
+
+    .font-title {
+      font-family: var(--font-title);
+    }
+
+    .font-body {
+      font-family: var(--font-body);
+    }
+
+    .font-secondary {
+      font-family: var(--font-secondary);
+    }
+  </style>
+</head>
+
+<body class="bg-[#fef9f6] text-[#3e2c23] font-body">
+
+  <!-- Section Ateliers -->
+  <section class="py-12 px-6 max-w-7xl mx-auto">
+    <h2 class="text-4xl font-title text-center uppercase tracking-wide mb-12">Nos Ateliers</h2>
+
+    <div class="flex flex-col md:flex-row gap-10">
+      <!-- Atelier 1 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 flex-1 text-center">
+        <h3 class="text-2xl font-title mb-2">Torréfaction Artisanale</h3>
+        <p class="text-gray-600 mb-4">Apprenez les bases du café, du grain vert au café torréfié.</p>
+        <img src="atelier1.jpg" alt="Torréfaction artisanale" class="rounded-lg w-full h-48 object-cover mb-4">
+        <ul class="font-secondary space-y-1">
+          <li><strong>📅</strong> Mardi 18h00 – 19h30</li>
+          <li><strong>💰</strong> 25€ / personne</li>
+          <li><strong>👥</strong> 6 max</li>
+        </ul>
+      </div>
+
+      <!-- Atelier 2 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 flex-1 text-center">
+        <h3 class="text-2xl font-title mb-2">Dégustation Sensorielle</h3>
+        <p class="text-gray-600 mb-4">Devenez expert des arômes par la dégustation comparative.</p>
+        <img src="ateliers2.jpg" alt="Dégustation sensorielle" class="rounded-lg w-full h-48 object-cover mb-4">
+        <ul class="font-secondary space-y-1">
+          <li><strong>📅</strong> Samedi 10h30 – 11h30</li>
+          <li><strong>💰</strong> 15€ / personne</li>
+          <li><strong>👥</strong> 8 max</li>
+        </ul>
+      </div>
+
+      <!-- Atelier 3 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 flex-1 text-center">
+        <h3 class="text-2xl font-title mb-2">Crée ton propre café</h3>
+        <p class="text-gray-600 mb-4">Compose ton blend unique à partir de grains variés.</p>
+        <img src="atelier3.jpg" alt="Créer son mélange de café" class="rounded-lg w-full h-48 object-cover mb-4">
+        <ul class="font-secondary space-y-1">
+          <li><strong>📅</strong> Jeudi 17h00 – 19h00</li>
+          <li><strong>💰</strong> 30€ / personne (250g inclus)</li>
+          <li><strong>👥</strong> 5 max</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ton footer reste ici inchangé -->
+  <style>
+    .footer-bg {
+      background-color: #f4e7dd; 
+    }
+  </style>
+
+  <footer class="footer-bg text-[#3e2c23] py-8">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
+
+
+      <div class="flex items-center mb-4 sm:mb-0">
+        <img src="logo.png" alt="Cream Coffee Shop Logo"  class="h-[150px] w-auto mr-15">
+      </div>
+
+      <div class="flex flex-col items-center sm:items-start mb-4 sm:mb-0">
+      <div class="mb-2 text-center sm:text-left">
+       <span class="font-semibold">Email :</span> contact@creamcoffeeshop.fr
+      </div>
+      <div class="mb-2 text-center sm:text-left">
+      <span class="font-semibold">Adresse :</span> 84 Rue Paul Bert, 62300 Lens
+      </div>
+      <div class="mb-2 text-center sm:text-left">
+       <span class="font-semibold">Horaires :</span> Lundi - Samedi : 7h00 - 20h00
+      </div>
+      </div>
+
+      <div class="text-center mt-4 mb-4">
+        <p class="text-lg mb-4">Rejoignez-nous sur les réseaux !</p>
+        <img src="reseaux.png" alt="Facebook" class="h-8 mx-auto">
+      </div>
+
+    </div>
+  </footer>
+</body>
+</html>
