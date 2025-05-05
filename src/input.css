@@ -1,5 +1,42 @@
-@tailwind base;
+  @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'Bebas';
+    src: url('./fonts/BebasNeue-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Fredoka';
+    src: url('./fonts/Fredoka-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Pacifico';
+    src: url('./fonts/Pacifico-Regular.ttf') format('truetype');
+  }
 
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .font-title {
+    font-family: 'Bebas', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .font-secondary {
+    font-family: 'Fredoka', sans-serif;
+  }
+}
