@@ -2,26 +2,19 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cream Coffee Shop</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    /* Custom sticky header */
     .sticky-header {
       position: sticky;
       top: 0;
       z-index: 50;
     }
 
-    /* Custom background color for the footer */
-    .footer-bg {
-      background-color: #efefdd;
-    }
-
-    /* Ensuring image proportions are consistent */
     .menu-section img {
       width: 100%;
       height: 100%;
@@ -30,25 +23,52 @@
   </style>
 </head>
 
-<body class="bg-[#f5f3ef] text-[#3e2c23]">
+<body class="bg-[#f5f3ef] text-[#3e2c23] font-body">
+
+  <header class="bg-[#f4e7dd] text-[#3e2c23] py-4 sticky-header">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div class="flex items-center">
+        <img src="logo.png" alt="Cream Coffee Shop Logo" class="h-[110px] w-auto" />
+      </div>
+
+      <nav class="hidden sm:flex space-x-8">
+        <a href="#accueil" class="text-lg font-semibold hover:text-[#5e4c3f]">Accueil</a>
+        <a href="#menu" class="text-lg font-semibold hover:text-[#5e4c3f]">Menu</a>
+        <a href="#ateliers" class="text-lg font-semibold hover:text-[#5e4c3f]">Ateliers</a>
+        <a href="#contact" class="text-lg font-semibold hover:text-[#5e4c3f]">Contact</a>
+      </nav>
+
+      <div class="sm:hidden flex items-center">
+        <label for="mobile-menu-toggle" class="cursor-pointer text-[#3e2c23]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+        <input type="checkbox" id="mobile-menu-toggle" class="hidden peer" />
+      </div>
+    </div>
+
+    <div class="sm:hidden peer-checked:flex flex-col items-center space-y-4 mt-4 hidden">
+      <a href="#accueil" class="text-lg font-semibold hover:text-[#5e4c3f]">Accueil</a>
+      <a href="#menu" class="text-lg font-semibold hover:text-[#5e4c3f]">Menu</a>
+      <a href="#ateliers" class="text-lg font-semibold hover:text-[#5e4c3f]">Ateliers</a>
+      <a href="#contact" class="text-lg font-semibold hover:text-[#5e4c3f]">Contact</a>
+    </div>
+  </header>
+
+  &nbsp;
 
   <div class="max-w-7xl mx-auto p-6">
+    <h1 class="text-3xl font-title text-center mb-8">La Carte 📝</h1>
 
-    <h1 class="text-3xl font-bold text-center mb-8">La Carte 📝</h1>
-
-    <!-- Menu Boissons Chaudes -->
     <div class="menu-section mb-12">
-      <h2 class="text-2xl font-semibold mb-4 text-center sm:text-left">Boissons Chaudes ☕</h2>
-      <!-- Images sous le titre, trois petites images en ligne -->
-      <div class="grid grid-cols-1 gap-4 mb-4 transition-all duration-500 ease-in-out sm:grid-cols-3">
-        <!-- Image 1 -->
-        <img src="img/cafe1.jpg" alt="Boissons Chaudes 1" class="rounded-lg shadow-md">
-        <!-- Image 2 -->
-        <img src="img/cafe2.jpg" alt="Boissons Chaudes 2" class="rounded-lg shadow-md">
-        <!-- Image 3 -->
-        <img src="img/cafe3.jpg" alt="Boissons Chaudes 3" class="rounded-lg shadow-md">
+      <h2 class="text-2xl font-title mb-4 text-center sm:text-left">Boissons Chaudes ☕</h2>
+      <div class="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-3">
+        <img src="img/cafe1.jpg" alt="Boissons Chaudes 1" class="rounded-lg shadow-md transform hover:scale-105 hover:shadow-lg transition" />
+        <img src="img/cafe2.jpg" alt="Boissons Chaudes 2" class="rounded-lg shadow-md transform hover:scale-105 hover:shadow-lg transition" />
+        <img src="img/cafe3.jpg" alt="Boissons Chaudes 3" class="rounded-lg shadow-md transform hover:scale-105 hover:shadow-lg transition" />
       </div>
-      
       <ul class="divide-y divide-gray-300 text-center sm:text-left">
         <li class="flex justify-between py-2"><span><b>Café Espresso</b> (Café moulu, eau, sucre ou carré de chocolat).</span><span><b>3€</b></span></li>
         <li class="flex justify-between py-2"><span><b>Cappuccino</b> (Expresso, lait, sucre, cannelle).</span><span><b>3,50€</b></span></li>
@@ -57,90 +77,68 @@
       </ul>
     </div>
 
-    <!-- Menu Boissons Froides -->
     <div class="menu-section mb-12">
-      <h2 class="text-2xl font-semibold mb-4 text-center sm:text-left">Boissons Froides 🍹</h2>
-      <div class="grid grid-cols-1 gap-4 mb-4 transition-all duration-500 ease-in-out sm:grid-cols-3">
-        <!-- Image 1 -->
-        <img src="img/citronnade.jpg" alt="Boissons Froides 1" class="rounded-lg shadow-md">
-        <!-- Image 2 -->
-        <img src="img/jus1.jpg" alt="Boissons Froides 2" class="rounded-lg shadow-md">
-        <!-- Image 3 -->
-        <img src="img/smoothie.jpg" alt="Boissons Froides 3" class="rounded-lg shadow-md">
+      <h2 class="text-2xl font-title mb-4 text-center sm:text-left">Boissons Froides 🍹</h2>
+      <div class="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-3">
+        <img src="img/citronnade.jpg" alt="Boissons Froides 1" class="rounded-lg shadow-md transform hover:scale-105 hover:shadow-lg transition" />
+        <img src="img/jus1.jpg" alt="Boissons Froides 2" class="rounded-lg shadow-md transform hover:scale-105 hover:shadow-lg transition" />
+        <img src="img/smoothie.jpg" alt="Boissons Froides 3" class="rounded-lg shadow-md transform hover:scale-105 hover:shadow-lg transition" />
       </div>
-
       <ul class="divide-y divide-gray-300 text-center sm:text-left">
         <li class="flex justify-between py-2"><span><b>Limonade Traditionnelle</b> (Jus de citron bio avec limonade artisanale + glaçons).</span><span><b>3,50€</b></span></li>
         <li class="flex justify-between py-2"><span><b>Citronnade Fraîche</b> (Sirop de citron vert bio maison + eau plate + glaçons et thym).</span><span><b>3,50€</b></span></li>
         <li class="flex justify-between py-2"><span><b>Jus d'Orange Pressé</b> (100 % pur jus, orange et orange sanguine bio).</span><span><b>4,50€</b></span></li>
         <li class="flex justify-between py-2"><span><b>Smoothie</b> (Fraise, Banane, Mangue, Framboise, Kiwi, Myrtille).</span><span><b>5,00€</b></span></li>
-      </ul>      
+      </ul>
     </div>
 
-    <!-- Menu Desserts -->
     <div class="menu-section">
-      <h2 class="text-2xl font-semibold mb-4 text-center sm:text-left">Desserts 🍰</h2>
-      <div class="grid grid-cols-1 gap-4 mb-4 transition-all duration-500 ease-in-out sm:grid-cols-3">
-        <!-- Image 1 -->
-        <img src="img/dessert.jpg" alt="Desserts 1" class="rounded-lg shadow-md">
-        <!-- Image 2 -->
-        <img src="img/tarte.jpg" alt="Desserts 2" class="rounded-lg shadow-md">
-        <!-- Image 3 -->
-        <img src="img/cookie.jpg" alt="Desserts 3" class="rounded-lg shadow-md">
+      <h2 class="text-2xl font-title mb-4 text-center sm:text-left">Desserts 🍰</h2>
+      <div class="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-3">
+        <img src="img/dessert.jpg" alt="Desserts 1" class="rounded-lg shadow-md transform hover:scale-105 hover:shadow-lg transition" />
+        <img src="img/tarte.jpg" alt="Desserts 2" class="rounded-lg shadow-md transform hover:scale-105 hover:shadow-lg transition" />
+        <img src="img/cookie.jpg" alt="Desserts 3" class="rounded-lg shadow-md transform hover:scale-105 hover:shadow-lg transition" />
       </div>
-
       <ul class="divide-y divide-gray-300 text-center sm:text-left">
         <li class="flex justify-between py-2"><span><b>Cookie Maison</b> (Pépite de chocolat blanc, noix de pécan, caramel au beurre salé).</span><span><b>2,50€</b></span></li>
         <li class="flex justify-between py-2"><span><b>Gaufre liégeoise</b> (Glace vanille, chocolat ou caramel), (framboise, fraise, banane), (coulis de framboise, chocolat ou caramel), (optionnel chantilly).</span><span><b>4€</b></span></li>
         <li class="flex justify-between py-2"><span><b>Brownie Noisette</b> (Brownie à base de sucre roux et noisettes concassées).</span><span><b>3,50€</b></span></li>
         <li class="flex justify-between py-2"><span><b>Tarte aux fraises</b> (Crème pâtissière à la vanille et fraises entières).</span><span><b>4,50€</b></span></li>
         <li class="flex justify-between py-2"><span><b>Crêpe</b> (Glace vanille, chocolat ou caramel), (fraises, banane), (coulis de fraise, chocolat ou caramel), (optionnel chantilly).</span><span><b>3€</b></span></li>
-      </ul>      
+      </ul>
     </div>
   </div>
 
-  <style>
-    .footer-bg {
-      background-color: #f4e7dd; 
-    }
-  </style>
-&nbsp;
-  <footer class="footer-bg text-[#3e2c23] py-2">
+  <div class="text-center mt-8 mb-4">
+    <a href="#commande" class="bg-[#3e2c23] text-white py-2 px-6 rounded-lg text-lg shadow-lg hover:bg-[#5e4c3f] transition-all duration-300">
+      Commander Maintenant !
+    </a>
+  </div>
+
+  &nbsp;
+
+  <footer class="bg-[#f4e7dd] text-[#3e2c23] py-2">
     <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
-    
-      <!-- Logo avec alignement centré sur mobile -->
-      <div class="flex items-center mb-2 sm:mb-0 text-center sm:text-left"> <!-- Ajouté text-center pour mobile et sm:text-left pour grands écrans -->
-        <img src="img/logo.png" alt="Cream Coffee Shop Logo" class="h-[130px] w-auto mr-6">
+      <div class="flex items-center mb-2 sm:mb-0 text-center sm:text-left">
+        <img src="img/logo.png" alt="Cream Coffee Shop Logo" class="h-[130px] w-auto mx-auto sm:mx-0 sm:ml-0" />
       </div>
-    
-      <!-- Contact et horaires avec texte plus petit et marges réduites -->
       <div class="flex flex-col items-center sm:items-start mb-2 sm:mb-0">
-        <div class="mb-1 text-center sm:text-left">
-          <span class="font-semibold">Email :</span> contact@creamcoffeeshop.fr
-        </div>
-        <div class="mb-1 text-center sm:text-left">
-          <span class="font-semibold">Adresse :</span> 84 Rue Paul Bert, 62300 Lens
-        </div>
-        <div class="mb-1 text-center sm:text-left">
-          <span class="font-semibold">Horaires :</span> Lundi - Samedi : 7h00 - 20h00
-        </div>
+        <div class="mb-1 text-center sm:text-left"><span class="font-semibold">Email :</span> contact@creamcoffeeshop.fr</div>
+        <div class="mb-1 text-center sm:text-left"><span class="font-semibold">Adresse :</span> 84 Rue Paul Bert, 62300 Lens</div>
+        <div class="mb-1 text-center sm:text-left"><span class="font-semibold">Horaires :</span> Lundi - Samedi : 7h00 - 20h00</div>
       </div>
-    
-      <!-- Réseaux sociaux avec texte plus petit et image réduite -->
       <div class="text-center mt-2 mb-2">
         <p class="text-sm mb-2">Rejoignez-nous sur les réseaux !</p>
-        <img src="img/reseauxsociaux.png" alt="Facebook" class="h-6 mx-auto">
+        <img src="img/reseauxsociaux.png" alt="Facebook" class="h-8 mx-auto" />
       </div>
-    
-
       <div class="text-center text-sm mt-4">
-        <p>&copy; 2025 Cream Coffee Shop. Tous droits réservés.</p>
+        <p>&copy; <b>2025 Cream Coffee Shop. Tous droits réservés.</b></p>
       </div>
-
     </div>
   </footer>
 
 </body>
-
 </html>
+
+
 
