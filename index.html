@@ -1,74 +1,186 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CreamCoffeeShop</title>
-  <link rel="stylesheet" href="src/css/styles.css">
-  <link rel="stylesheet" href="src/output.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accueil – Cream Coffee Shop</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
-<body class="image-accueil-jpg">
-  <header>
-    <header class="flex justify-between items-center p-6 bg-beige-clair shadow-md">
-      <a href="accueil">
-        <img src="creamcoffeeshop.png" alt="Logo du café Cream Coffee Shop" class="logo">
-      </a>
-      <div class="shop-name">
-        <h2>Cream Coffee Shop</h2>
-        <p class="slogan">"la crème de la crème du café artisanaux."</p>
-        <p class="mission">"Un café, une histoire, un savoir-faire."</p>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="ateliers.html">Ateliers</a></li>
-          <li><a href="contact.html" class="text-gray-800 hover:text-white hover:bg-gray-500 px-4 py-2 rounded-lg"> Contact</a></li>
-        </ul>
+<body class="bg-[#fef9f6] text-[#3e2c23] font-body min-h-screen flex flex-col overflow-hidden">
+<!-- <body class="bg-[#fef9f6] text-[#3e2c23] font-body min-h-screen flex flex-col"> -->
+  <header class="sticky top-0 z-50 bg-[#fef9f6] shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <img src="logo.png" alt="Logo" class="h-[150px] w-auto mr-10">
+      <nav class="space-x-6">
+        <a href="index.html" class="text-[#3e2c23] font-bold">Accueil</a>
+        <a href="Menu.html" class="text-[#3e2c23] font-bold">Menu</a>
+        <a href="Atelier.html" class="text-[#3e2c23] font-bold">Ateliers</a>
+        <a href="Contact.html" class="text-[#3e2c23] font-bold">Contact</a>
       </nav>
-    </header>
+    </div>
   </header>
 
+  <style>
+    @font-face {
+      font-family: 'Bebas';
+      src: url('./fonts/BebasNeue-Regular.ttf') format('truetype');
+    }
 
+    @font-face {
+      font-family: 'Poppins';
+      src: url('./fonts/Poppins-Regular.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Fredoka';
+      src: url('./fonts/Fredoka-Regular.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Pacifico';
+      src: url('./fonts/Pacifico-Regular.ttf') format('truetype');
+    }
+
+    :root {
+      --font-title: 'Bebas', sans-serif;
+      --font-body: 'Poppins', sans-serif;
+      --font-secondary: 'Fredoka', sans-serif;
+    }
+
+    .font-title {
+      font-family: var(--font-title);
+    }
+
+    .font-body {
+      font-family: var(--font-body);
+    }
+
+    .font-secondary {
+      font-family: var(--font-secondary);
+    }
+  </style>
+</head>
+
+<main class="overflow-y-auto snap-y snap-mandatory h-screen">
+  <section class="relative snap-start">
+    <img src="cafe.jpg" alt="Ambiance du café" class="h-400[px] w-300[px] mr-15">
+    <!-- <img src="cafe.jpg" alt="Ambiance du café" class="w-full h-auto object-cover opacity-50"> -->
+    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20">
+      <h1 class="text-white text-5xl font-title">Bienvenue chez Cream Coffee Shop</h1>
+    </div>
+  </section>
+
+  <section class="py-16 px-6 space-y-12">
+    <div class="text-center">
+      <h2 class="text-2xl font-title text-[#3e2c23]">Nos Offres</h2>
+      <p class="font-body text-lg text-gray-700 mt-5">Découvrez nos multitudes de café, pâtisseries et nos ateliers de torréfaction.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div class="flex flex-col items-center">
+        <img src="cafénoir.jpg" class="w-32 h-32 object-cover rounded-full shadow-md">
+        <img src="cafécrème.jpg" class="w-32 h-32 object-cover rounded-full shadow-md">
+        <p class="font-body mt-4 text-center">Toutes sortes de café chauds et glacés y compris notre iconique Café Crème 💖</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="patisseriemaison.jpg" class="w-32 h-32 object-cover rounded-full shadow-md">
+        <img src="homepatisserie.jpg" class="w-32 h-32 object-cover rounded-full shadow-md">
+        <p class="font-body mt-4 text-center">Pâtisseries Maison préparées chaque matin</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="imageblock2.jpg" class="w-32 h-32 object-cover rounded-full shadow-md">
+        <img src="imageblock3.jpg" class="w-32 h-32 object-cover rounded-full shadow-md">
+        <p class="font-body mt-4 text-center">Ateliers de Torréfaction pour les curieux</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="flex-grow">
+  <section class="py-17 px-6 bg-[#f4f1dd]">
+    <div class="text-center">
+    <h3 class="text-2xl font-title text-[#3e2c23]">☕ CreamCofeeshop, c'est la crème de la crème du café artisanal. Un Café, Une Histoire, Un Savoir-faire.</h3>
+
+      <div class="text-left">
+        <p class="whitespace-pre-line">
+        <h4 class="text-2xl font-title text-[#3e2c23]">Une rencontre entre deux passionnées de café: Notre Café est bien plus qu’un simple Coffee shop. 
+        C’est un lieu où chaque tasse raconte une histoire, celle d’un savoir-faire transmis et d’une quête incessante de qualité.
+      Tout a commencé autour d’une tasse de café, partagée entre amis ☕🤝☕, où l’idée de créer un espace dédié à l’univers du café a germé. 
+      L’objectif était clair : offrir aux amateurs de café une expérience unique, alliant qualité, convivialité et pédagogie. Au cœur de notre démarche se trouve la torréfaction artisanale, un art qui permet de révéler toute la richesse des arômes du café. 
+      Contrairement à la torréfaction industrielle, qui privilégie la rapidité et la standardisation, c'est un processus lent et maîtrisé, 
+      garantissant une qualité supérieure du produit final .
+      Chaque grain est torréfié avec soin, à une température modérée, permettant ainsi le développement optimal des arômes et la préservation 
+      de la fraîcheur du café.</h4>
+
+      <p class="whitespace-pre-line">
+      <h5 class="text-2xl font-title text-[#3e2c23]">Un engagement envers la qualité et la durabilité: Chez Creamcofeeshop, nous sélectionnons nos grains de café avec rigueur, en privilégiant des producteurs respectueux de l’environnement et 
+      des pratiques durables. Nous croyons en une approche éthique du commerce, assurant une rémunération juste pour les producteurs et contribuant
+      à une filière du café plus responsable🌿🌍♻️.</h5>
+      
+      <p class="whitespace-pre-line">
+      <h6 class="text-2xl font-title text-[#3e2c23]">Des ateliers pour partager notre passion:
+      Afin de transmettre notre amour du café et de la torréfaction, nous organisons régulièrement des ateliers. Ces moments conviviaux permettent 
+      à chacun de découvrir les secrets de la torréfaction, d’apprendre à déguster un café de qualité et de comprendre les subtilités qui font 
+      toute la différence.☕</h6>
+      </div>
+      
+
+
+      <p class="whitespace-pre-line">
+      <h7 class="text-2xl font-title text-[#3e2c23]">Ce que disent nos clients</h7>
+    <div class="flex overflow-x-auto space-x-6 mt-8">
+      <div class="flex-none w-80 bg-white p-6 rounded-lg shadow-lg">
+        <p class="font-body text-gray-700">"Un café délicieux dans un cadre apaisant. Les ateliers sont très instructifs Je pense offrir un ateier surprise pour ma grand-mère qui est faan de café 🤔."</p>
+        <p class="mt-4 font-semibold">Claire D.</p>
+      </div>
+      <div class="flex-none w-80 bg-white p-6 rounded-lg shadow-lg">
+        <p class="font-body text-gray-700">"Les pâtisseries sont faites maison et absolument irrésistibles."</p>
+        <p class="mt-4 font-semibold">Marc L.</p>
+        </div>
+        <div class="flex-none w-80 bg-white p-6 rounded-lg shadow-lg">
+          <p class="font-body text-gray-700">"La qualité du café est juste WOW et la crème est à tomber! Moi qui devait réduire un peu le café cela risque d'être compliqué 😛🤣"</p>
+          <p class="mt-4 font-semibold">Amy T.</p>
+      </div>
+      <div class="flex-none w-80 bg-white p-6 rounded-lg shadow-lg">
+        <p class="font-body text-gray-700">"J'y reviendrais à coup sûr!."</p>
+        <p class="mt-4 font-semibold">Sadia N.</p>
+    </div>
+    </div>
+  </section>
+</main>
 
   <style>
     .footer-bg {
-  background-color: #f4e7dd; 
-}
-</style>
+      background-color: #f4e7dd; 
+    }
+  </style>
 
-<footer class="footer-bg text-[#3e2c23] py-8">
-<div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
+<footer class="w-full bg-[#f4e7dd] text-[#3e2c23] py-8">
+  <!-- <footer class="footer-bg text-[#3e2c23] py-8"> -->
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
 
 
-  <div class="flex items-center mb-4 sm:mb-0">
-    <img src="logo.png" alt= "Coffee Shop Logo"  class="h-[150px] w-auto mr-15">
-  </div>
+      <div class="flex items-center mb-4 sm:mb-0">
+        <img src="logo.png" alt="Cream Coffee Shop Logo"  class="h-[150px] w-auto mr-15">
+      </div>
 
-  <div class="flex flex-col items-center sm:items-start mb-4 sm:mb-0">
-  <div class="mb-2 text-center sm:text-left">
-   <span class="font-semibold">Email :</span> contact@creamcoffeeshop.fr
-  </div>
-  <div class="mb-2 text-center sm:text-left">
-  <span class="font-semibold">Adresse :</span> 84 Rue Paul Bert, 62300 Lens
-  </div>
-  <div class="mb-2 text-center sm:text-left">
-   <span class="font-semibold">Horaires :</span> Lundi - Samedi : 7h00 - 20h00
-  </div>
-  </div>
+      <div class="flex flex-col items-center sm:items-start mb-4 sm:mb-0">
+      <div class="mb-2 text-center sm:text-left">
+      <span class="font-semibold">Email :</span> contact@creamcoffeeshop.fr
+      </div>
+      <div class="mb-2 text-center sm:text-left">
+      <span class="font-semibold">Adresse :</span> 84 Rue Paul Bert, 62300 Lens
+      </div>
+      <div class="mb-2 text-center sm:text-left">
+      <span class="font-semibold">Horaires :</span> Lundi - Samedi : 7h00 - 20h00
+      </div>
+      </div>
 
-  <div class="text-center mt-4 mb-4">
-    <p class="text-lg mb-4">Rejoignez-nous sur les réseaux !</p>
-    <img src="reseaux.png" alt="Facebook" class="h-8 mx-auto">
+    <div class="text-center mt-4 mb-4">
+        <p class="text-lg mb-4">Rejoignez-nous sur les réseaux !</p>
+        <img src="reseaux.png" alt="Facebook" class="h-8 mx-auto">
+    </div>
 
-  </div>
-
-</div>
-</footer>
+    </div>
+  </footer>
 </body>
 
 </html>
